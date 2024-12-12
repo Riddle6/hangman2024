@@ -89,16 +89,16 @@ def main():
             correctLetters.append(guess)
 
         # Check if the player has won:
-        foundAllLetters = True # Start off assuming they've won
-        for secretWordLetter in secretWord:
-            if secretWordLetter not in correctLetters:
-                # There's a letter in the secretWord that isn't yet in correctLetters, so the player hasn't won:
-                foundAllLetters = False
-                break
-        if foundAllLetters:
-            print("Yes! The secret word is: ", secretWord)
-            print("You have won!")
-            break # Break out of the main game loop
+            foundAllLetters = True # Start off assuming they've won
+            for secretWordLetter in secretWord:
+                if secretWordLetter not in correctLetters:
+                    # There's a letter in the secretWord that isn't yet in correctLetters, so the player hasn't won:
+                    foundAllLetters = False
+                    break
+            if foundAllLetters:
+                print("Yes! The secret word is: ", secretWord)
+                print("You have won!")
+                break # Break out of the main game loop
 
 '''
 Draw the current state of the hangman game, along with the missed and correctly guessed letters of the 
